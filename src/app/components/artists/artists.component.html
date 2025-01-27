@@ -1,1 +1,23 @@
-<p>artists works!</p>
+<div class="container">
+    <h2>Artists List</h2>
+    <!-- Show message if no artists are found -->
+    @if (artist_list.length == 0){
+        <div class="no-data">
+            No artists found
+        </div>
+        }
+    <div class="artists-grid">
+        <div class="artist-card">
+            @for (artist of artist_list;track $index){
+            <h3>{{artist.name}}</h3>
+            <p><strong>id:</strong> {{artist.id}}</p>
+            <p><strong>name:</strong> {{artist.name}}</p>
+            <p><strong>img:</strong> {{artist.image}}</p>
+            <p><strong>share URL:</strong> {{artist.shareurl}}</p>
+            }
+        </div>
+    </div>
+
+
+
+</div>
